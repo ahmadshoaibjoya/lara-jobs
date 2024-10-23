@@ -6,6 +6,7 @@ use App\Models\Job;
 
 
 Route::get('/', function () {
+   
     return view('home');
 });
 
@@ -23,7 +24,7 @@ Route::get('/job/{id}', function ($id) {
 
     $job=Job::find($id);
     return view('job',['job'=>$job]);
-    
+
 });
 
 
